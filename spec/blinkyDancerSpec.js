@@ -28,8 +28,8 @@ describe("blinkyDancer", function() {
 
       expect(blinkyDancer.step.callCount).to.be.equal(1);
 
-      // clock.tick(timeBetweenSteps);
-      // expect(blinkyDancer.step.callCount).to.be.equal(2);
+      clock.tick(timeBetweenSteps);
+      expect(blinkyDancer.step.callCount).to.be.equal(2);
     });
   });
 });
