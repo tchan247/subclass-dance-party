@@ -4,15 +4,30 @@
     <title>Object Dance Party</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <script src="lib/jquery.js"></script>
+    <script src="lib/jquery-ui-1.11.4/jquery-ui.js"></script>
     <script src="src/dancer.js"></script>
     <script src="src/blinkyDancer.js"></script>
     <script src="src/blinkingSquare.js"></script>
+    <script src="src/maleDancer.js"></script>
+    <script src="src/femaleDancer.js"></script>
+    <script src="src/dogDancer.js"></script>
+    <script src="src/catDancer.js"></script>
   </head>
   <body>
     <div class="topbar">
+      <a href="#" class="createBunch"> Create Bunch </a>
+      <a href="#" class="lineUp"> Line Up </a>
+      <a href="#" class="scatter"> Scatter </a>
+      <a href="#" class="dance"> Dance </a>
+      <a href="#" class="shake"> Shake </a>
+
       <span class="title">object dance party</span>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">add a blinky dancer</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkingSquare">add a blinking square</a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">blinky dancer</a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkingSquare">blinking square</a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="maleDancer">prairie dog</a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="femaleDancer">hamster</a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="dogDancer">hedgehog</a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="catDancer">grumpy cat</a>
     </div>
     <script src="src/init.js"></script>
   </body>

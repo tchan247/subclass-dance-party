@@ -28,18 +28,51 @@ $(document).ready(function(){
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+
+    window.dancers.push(dancer);
   });
 
   $(".createBunch").on("click", function(event){
 
   });
 
-  $(".createlineUp").on("click", function(event){
-
+  $(".lineUp").on("click", function(event){
+    var spacing = 0;
+    window.dancers.forEach(function(obj){
+      $(obj.$node).css('left', 100);
+      $(obj.$node).css('top', 100 + spacing);
+      spacing += 50;
+    });
   });
 
   $(".scatter").on("click", function(event){
-
+    window.dancers.forEach(function(obj) {
+      $(obj.$node).css('left', $('body').width() * 0.90 * Math.random());
+      $(obj.$node).css('top', $('body').height() * 0.90 * Math.random());
+    });
   });
+
+  $(".dance").on("click", function(){
+    window.dancers.forEach(function(obj){
+      $(obj.$node).css({
+        transform: 'translateY(300px) rotateZ(120deg)',
+        WebkitTransform: 'translate(300px) rotateZ(120deg)',
+        WebkitTransform: 'rotate(300deg) rotateZ(120deg)',
+        msTransform: 'translateY(300px) rotate(120deg)'
+      }, function(){
+        $(obj.$node).css('transform', '');
+      });
+    })
+  });
+
+  $(".shake").on("click", function(){
+    window.dancers.forEach(function(obj){
+      $(obj.$node).effect('shake');
+    });
+  });
+
+
+
+
 });
 
