@@ -1,7 +1,8 @@
 var makeBlinkingSquare = function(top, left, timeBetweenSteps){
   var style = 'blinkingSquare';
+  
   makeDancer.call(this, top, left, timeBetweenSteps, style);
-    this.step();
+  this.step();
 };
 
 makeBlinkingSquare.prototype = Object.create(makeDancer.prototype);
