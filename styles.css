@@ -84,6 +84,20 @@ body, a:link, a:visited, a:active{
 }
 
 .catDancer:hover{
-  -webkit-transform: rotate(36000deg) ;
+  -webkit-transform: rotate(50000deg) ;
   transform-origin: center;
+}
+
+.spin {
+    transition-duration: 10s;
+    transition-property: transform;
+    -webkit-transform: rotate(3600deg) ;
+    transform-origin: center;
+}
+
+.quickspin {
+    transition-duration: 2s;
+    transition-property: transform;
+    -webkit-transform: rotate(1440deg) ;
+    transform-origin: center;
 }
